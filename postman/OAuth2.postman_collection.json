@@ -1,0 +1,207 @@
+{
+	"variables": [],
+	"info": {
+		"name": "OAuth2",
+		"_postman_id": "af60913a-25c7-5c7b-d52c-4b32fcaaded1",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "资源拥有者凭据许可",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/oauth/token?grant_type=password&client_id=userservice1&client_secret=1234&username=writer&password=writer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "client_id",
+							"value": "userservice1",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "client_secret",
+							"value": "1234",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "username",
+							"value": "writer",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "password",
+							"value": "writer",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "授权服务校验jwt",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/oauth/check_token?client_id=userservice1&client_secret=1234&token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsidXNlcnNlcnZpY2UiXSwidXNlcl9uYW1lIjoid3JpdGVyIiwic2NvcGUiOlsiRk9PIl0sImV4cCI6MTYyMTkzMzA4OSwidXNlckRldGFpbHMiOnsicGFzc3dvcmQiOm51bGwsInVzZXJuYW1lIjoid3JpdGVyIiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6IlJFQUQsV1JJVEUifV0sImFjY291bnROb25FeHBpcmVkIjp0cnVlLCJhY2NvdW50Tm9uTG9ja2VkIjp0cnVlLCJjcmVkZW50aWFsc05vbkV4cGlyZWQiOnRydWUsImVuYWJsZWQiOnRydWV9LCJhdXRob3JpdGllcyI6WyJSRUFELFdSSVRFIl0sImp0aSI6IjRmYzNmZTc5LTJkYmUtNDRjMy1iYjVkLTY1MDcwY2YzYzM4ZiIsImNsaWVudF9pZCI6InVzZXJzZXJ2aWNlMSJ9.JjGETTpPtZ02_lFA7wOkUxW6kzmVPPFCR-jgO67hK2j1-uafLMOpxTg8yxteh0UKwdiuKecm5_UygahMGuMMDrbamAzyRxRY2ovq8AZV0U9mjfjOOgdBrU_UXCpW81xmCwHa3I6fixn73vR4CtkZIIO3Beto1odrsFKImPAbARM",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth",
+						"check_token"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "userservice1",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "client_secret",
+							"value": "1234",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsidXNlcnNlcnZpY2UiXSwidXNlcl9uYW1lIjoid3JpdGVyIiwic2NvcGUiOlsiRk9PIl0sImV4cCI6MTYyMTkzMzA4OSwidXNlckRldGFpbHMiOnsicGFzc3dvcmQiOm51bGwsInVzZXJuYW1lIjoid3JpdGVyIiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6IlJFQUQsV1JJVEUifV0sImFjY291bnROb25FeHBpcmVkIjp0cnVlLCJhY2NvdW50Tm9uTG9ja2VkIjp0cnVlLCJjcmVkZW50aWFsc05vbkV4cGlyZWQiOnRydWUsImVuYWJsZWQiOnRydWV9LCJhdXRob3JpdGllcyI6WyJSRUFELFdSSVRFIl0sImp0aSI6IjRmYzNmZTc5LTJkYmUtNDRjMy1iYjVkLTY1MDcwY2YzYzM4ZiIsImNsaWVudF9pZCI6InVzZXJzZXJ2aWNlMSJ9.JjGETTpPtZ02_lFA7wOkUxW6kzmVPPFCR-jgO67hK2j1-uafLMOpxTg8yxteh0UKwdiuKecm5_UygahMGuMMDrbamAzyRxRY2ovq8AZV0U9mjfjOOgdBrU_UXCpW81xmCwHa3I6fixn73vR4CtkZIIO3Beto1odrsFKImPAbARM",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "客户端授权许可类型",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/oauth/token?grant_type=client_credentials&client_id=userservice2&client_secret=1234",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "client_id",
+							"value": "userservice2",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "client_secret",
+							"value": "1234",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "授权码许可",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/oauth/token?grant_type=authorization_code&client_id=userservice3&client_secret=1234&code=hNd8eO&redirect_uri=https://baidu.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "client_id",
+							"value": "userservice3",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "client_secret",
+							"value": "1234",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "code",
+							"value": "hNd8eO",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://baidu.com",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
